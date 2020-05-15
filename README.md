@@ -1,15 +1,17 @@
 # uno-ytlive-chat
 ## Usage
-Requirements:
-* sh
-* python3
-* linux (or macOS)
-* pytchat
-* pyserial
-* unidecode
+#### Requirements:
+* python3 with pip
+  * pytchat
+  * pyserial
+  * unidecode
 
 <br/><br/>
-Install, upload and run:
+#### Install dependencies:
+```sh
+pip install pytchat pyserial unidecode--user
+```
+#### Install, upload and run:
 ```sh
 git clone https://github.com/LukasDrsman/uno-yt-livechat.git
 cd uno-yt-livechat
