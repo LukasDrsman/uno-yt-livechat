@@ -1,0 +1,8 @@
+uno/.clang_complete
+uno/.gcc_flags.json
+uno/.gitignore
+uno/.travis.yml
+uno/.pio/
+uno/lib/*
+__pycache__/
+config.py

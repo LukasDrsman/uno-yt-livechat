@@ -1,0 +1,24 @@
+#!/bin/sh
+
+dir=$(pwd)
+
+if [ -d "./uno/lib" ]; then
+    if [ -d "./uno/lib/Arduino-LiquidCrystal-I2C-library" ]; then
+        echo "I2C LCD library present"
+    else
+        cd ./uno/lib
+        git clone https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library.git
+        echo "I2C LCD library cloned"
+    fi
+else
+    mkdir ./uno/lib
+    echo "lib folder created"
+    cd ./uno/lib
+    git clone https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library.git
+    echo "I2C LCD library cloned"
+fi
+
+cd $dir
+cd ./uno
+pio run --target=upload
+cd $dir

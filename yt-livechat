@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+
+from pytchat import LiveChat
+import serial
+from time import sleep
+from config import *
+import unidecode
+
+try:
+    livechat = LiveChat(video_id = yt_chat_id)
+except:
+    yt_chat_id = input("Enter video id: ")
+    livechat = LiveChat(video_id = yt_chat_id)
+try:
+    connection = serial.Serial(port, 9600)
+except:
+    port = input("Enter port: ")
+    connection = serial.Serial(port, 9600)
+
+while livechat.is_alive():
+    try:
+        chatdata = livechat.get()
+        for c in chatdata.items:
+            data_string = f"{c.author.name}-{c.message}"
+            ascii_data_string = unidecode.unidecode(data_string)
+            data_char = list(ascii_data_string)
+            for i in range(len(data_char)):
+                connection.write(str.encode(data_char[i]))
+                sleep(char_delay)
+            sleep(chat_delay)
+            connection.write(b'\x00')
+            chatdata.tick()
+            sleep(0.2)
+
+    except KeyboardInterrupt:
+        livechat.terminate()
+        break
+
+    except:
+        livechat = LiveChat(video_id = yt_chat_id)
+    
