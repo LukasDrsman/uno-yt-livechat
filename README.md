@@ -1,4 +1,4 @@
-# uno-ytlive-chat
+# uno-yt-livechat
 ## Usage
 #### Requirements:
 * python3 with pip
