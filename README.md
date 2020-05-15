@@ -8,7 +8,7 @@
   
 #### Install dependencies:
 ```sh
-pip install pytchat pyserial unidecode--user
+pip install pytchat pyserial unidecode --user
 ```
 #### Install, upload and run:
 ```sh
