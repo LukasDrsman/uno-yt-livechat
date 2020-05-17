@@ -1,14 +1,16 @@
 # uno-yt-livechat
-## Usage
+## Installation
 #### Requirements:
 * python3 with pip
   * pytchat
   * pyserial
   * unidecode
+  * platformio
   
 #### Install dependencies:
 ```sh
 pip install pytchat pyserial unidecode --user
+sudo pip install platformio
 ```
 #### Install, upload and run:
 ```sh
