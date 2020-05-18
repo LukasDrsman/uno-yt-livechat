@@ -13,7 +13,7 @@
 pip install pytchat pyserial unidecode --user
 sudo pip install platformio
 ```
-#### Install, upload and run:
+#### Install and upload:
 ```sh
 git clone https://github.com/LukasDrsman/uno-yt-livechat.git
 cd uno-yt-livechat
