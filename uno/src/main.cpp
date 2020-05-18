@@ -8,7 +8,7 @@ int width = 16;
 int height = 2;
 
 
-LiquidCrystal_I2C lcd(0x27, width, height);
+LiquidCrystal_I2C lcd(address, width, height);
 char chr;
 bool ndata = false;
 int x = 0;
