@@ -19,6 +19,6 @@ cd uno-yt-livechat
 # edit and rename config-example.py to config.py
 ./upload
 ./build
-yt-livechat
 ```
-
+## Usage
+![preview](https://github.com/LukasDrsman/uno-yt-livechat/blob/master/uno/lcd_diagram.png)
