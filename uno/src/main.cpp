@@ -2,8 +2,12 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
+// display configuration
+char address = 0x27;
 int width = 16;
 int height = 2;
+
+
 LiquidCrystal_I2C lcd(0x27, width, height);
 char chr;
 bool ndata = false;
@@ -44,7 +48,7 @@ void setup() {
   lcd.clear();
   Serial.begin(9600);
   lcd.setCursor(0, 0);
-  lcd.print("YTchat - ver 0.1");
+  lcd.print("YTchat - ver 0.2");
   delay(2000);
   lcd.clear();
   lcd.setCursor(0, 0);
