@@ -44,7 +44,7 @@ void setup() {
   lcd.clear();
   Serial.begin(9600);
   lcd.setCursor(0, 0);
-  lcd.print("YTchat - ver 1.0");
+  lcd.print("YTchat - ver 0.1");
   delay(2000);
   lcd.clear();
   lcd.setCursor(0, 0);
