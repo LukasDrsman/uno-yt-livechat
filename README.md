@@ -17,11 +17,6 @@ sudo pip install platformio
 ```sh
 git clone https://github.com/LukasDrsman/uno-yt-livechat.git
 cd uno-yt-livechat
-# edit and rename config-example.py to config.py
-# change i2c address or display size in uno/src/main.cpp if needed
-# connect arduino uno to your computer
-./upload
-./build
 ```
 #### Configure:
 ##### uno/src/main.cpp
@@ -52,8 +47,10 @@ port = "/dev/ttyACM0"
 chr_delay = 0.15
 chat_delay = 2
 ```
+
 #### Upload and install:
 ```sh
+mv config-example.py config.py
 ./upload
 ./build
 ```
