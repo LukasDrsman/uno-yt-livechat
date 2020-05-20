@@ -27,7 +27,6 @@ cd uno-yt-livechat
 extern char address = 0x27;
 extern int width = 16;
 extern int lines = 2;
-...
 ```
 ##### config-example.py
  * yt_chat_id - livestream id ( /watch?v=*this string* )
