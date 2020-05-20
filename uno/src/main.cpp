@@ -1,14 +1,9 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include <config.h>
 
-// display configuration
-char address = 0x27;
-int width = 16;
-int height = 2;
-
-
-LiquidCrystal_I2C lcd(address, width, height);
+LiquidCrystal_I2C lcd(address, width, lines);
 char chr;
 bool ndata = false;
 int x = 0;
@@ -23,9 +18,9 @@ void receiveChar() {
 
 void showChar() {
   if(ndata == true) {
-    if(x < width && y < height) {
+    if(x < width && y < lines) {
       lcd.print(chr);
-      if(x >= (width-1) && y >= (height-1)) {
+      if(x >= (width-1) && y >= (lines-1)) {
         lcd.clear();
         x = 0;
         y = 0;
@@ -48,7 +43,7 @@ void setup() {
   lcd.clear();
   Serial.begin(9600);
   lcd.setCursor(0, 0);
-  lcd.print("YTchat - ver 0.2");
+  lcd.print("YTchat - ver 1.0");
   delay(2000);
   lcd.clear();
   lcd.setCursor(0, 0);

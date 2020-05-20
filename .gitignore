@@ -3,6 +3,6 @@ uno/.gcc_flags.json
 uno/.gitignore
 uno/.travis.yml
 uno/.pio/
-uno/lib/*
+uno/lib/Arduino-LiquidCrystal-I2C-library
 __pycache__/
 config.py
