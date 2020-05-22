@@ -47,7 +47,7 @@ chat_delay = 2
 ```sh
 mv config-example.py config.py
 ./upload
-./build
+sudo ./install
 ```
 ## Usage
 #### Connect display to uno:

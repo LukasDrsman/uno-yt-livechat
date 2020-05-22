@@ -1,0 +1,15 @@
+#!/bin/sh
+
+dir=$(pwd)
+echo "Installing uno-yt-livechat..."
+if [ -d "/usr/share/uno-yt-livechat" ]; then
+    cp $dir/*.py /usr/share/uno-yt-livechat/
+    cp $dir/yt-livechat /usr/share/uno-yt-livechat/
+else
+    mkdir /usr/share/uno-yt-livechat
+    cp $dir/*.py /usr/share/uno-yt-livechat/
+    cp $dir/yt-livechat /usr/share/uno-yt-livechat/
+fi
+cd /usr/share/uno-yt-livechat
+rm config-example.py
+cp $dir/.run/yt-livechat /usr/bin
