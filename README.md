@@ -22,12 +22,11 @@ cd uno-yt-livechat
 ##### uno/lib/config/config.h
  * address - i2c address
  * width - display width in characters per line
- * height - number of lines of display
+ * lines - number of lines of display
 ```c
 extern char address = 0x27;
 extern int width = 16;
 extern int lines = 2;
-...
 ```
 ##### config-example.py
  * yt_chat_id - livestream id ( /watch?v=*this string* )
