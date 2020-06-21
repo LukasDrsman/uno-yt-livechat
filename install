@@ -12,4 +12,4 @@ else
 fi
 cd /usr/lib/uno-yt-livechat
 rm config-example.py
-cp $dir/.run/yt-livechat /usr/bin
+cp $dir/bin/yt-livechat /usr/bin
